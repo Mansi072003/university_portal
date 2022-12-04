@@ -1,0 +1,89 @@
+* {
+  margin: 0px;
+  transition: 300ms;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
+  transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+  position: fixed; /* Sticky/fixed navbar */
+  width: 100%;
+  top: 0; /* At the top */
+  z-index: 99;
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 17px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+/* Style the logo */
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+ 
+}
+
+/* Links on mouse-over */
+#navbar a:hover {
+  background-color: #ddd;
+  color: rgb(46, 122, 145);
+  transition: 0.4s;
+  font-size: 18px;
+  box-shadow: 4px 5px 10px rgba(26, 55, 68, 0.906);
+
+}
+
+/* Style the active/current link */
+#navbar a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Display some links to the right */
+#navbar-right {
+  float: right;
+}
+
+header button {
+  border-radius: 10px;
+  padding: 1% 5%;
+  border: none;
+}
+
+header button:hover {
+  background-color: rgba(256, 200, 100);
+}
+
+.carousel-item img {
+  width:600px;
+  margin:0px 3px 0px 3px;
+  height: 800px;
+  
+}
+
+.bg-image {
+  background-image: url("../image/edu.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-body {
+  color: white;
+  font-size: large;
+  padding: 10%;
+}
+

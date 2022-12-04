@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/sign_up.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <div class="main">
+  
+        <h1>Sign Up</h1>
+        <form id="regis">
+            <label>First Name:</label><br>
+            <input type="text" id="fname" placeholder="Enter your first name"><br><div class="span-container">
+                <span id="fname_message" class="text"> </span>
+            </div><br>
+            <label>Last Name:</label><br>
+            <input type="text" id="lname" placeholder="Enter your Last name"><br><div class="span-container">
+                <span id="lname_message" class="text"> </span>
+            </div><br>
+            <label>Email Id:</label><br>
+            <input type="text" id="email" placeholder="Enter your Email Id"><br><div class="span-container">
+                <span id="email_message" class="text"> </span>
+            </div><br>
+            <label>Password:</label><br>
+            <input type="text" id="pass" placeholder="Enter your password"><br><div class="span-container">
+                <span id="pass_message" class="text"> </span>
+            </div><br>
+            <label>Confirm Password:</label><br>
+            <input type="text" id="cpass" placeholder="Enter your Confirm password"><br><div class="span-container">
+                <span id="cpass_message" class="text"> </span>
+            </div><br>
+            <label>Gender:</label><br>
+            <input type="radio" name="gender[]" id="male">
+            <span id="male">Male</span>&nbsp;
+            <input type="radio" name="gender[]" id="female">
+            <span id="female">Female</span><br>
+            <label for="gender[]" class="error"></label>
+            <div class="span-container"><span class="error_message"></span><br><br>
+            <input type="submit" id="submit" value="Submit"><br>
+            <p>Already have an account?&nbsp;<a href="Sign_in.html">Login here.</a></p>
+    </form>
+<script>
+    $(document).ready(function () {
+
+        $("#submit").click(function () {
+            var fname = $('#fname').val();
+            var lname = $('#lname').val();
+            var email = $('#email').val();
+            var pass = $('#pass').val();
+            var cpass = $('#cpass').val();
+            var gender= $('.error').val();
+            if (fname == "") {
+                $("#fname_message").html("**Please Enter Name");
+                return false;
+            }
+            else if (lname == "") {
+                $("#lname_message").html("**Please Enter Name");
+                return false;
+            }
+            else if (email == "") {
+                $("#email_message").html("**Please Enter email ");
+                return false;
+            }
+            else if (pass == "") {
+                $("#pass_message").html("**Please Enter password ");
+                return false;
+            }
+            else if (cpass == "") {
+                $("#cpass_message").html("**Please Enter confirm password ");
+                return false;
+            }
+             else if (gender == "") {
+                $(".error_message").html("**Please Enter gender ");
+                return false;
+            }
+            
+            else {
+                return true;
+            }
+            var show = $('#fname').val();
+
+        });
+    });
+
+</script>
+</div>
+
+</body>
+</html>
